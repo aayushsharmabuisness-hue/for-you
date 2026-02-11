@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Gallery 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <div class="hearts"></div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+<body>
+
+<h1>Some Beautiful Memories 📸</h1>
+
+<div class="gallery">
+    <img src="1.jpeg">
+    <img src="2.jpeg">
+    <img src="3.jpeg">
+    <img src="4.jpeg">
+    <img src="5.jpeg">
+    <img src="6.jpeg">
+    <img src="7.jpeg">
+    <img src="8.jpeg">
+    <img src="9.jpeg">
+    <img src="10.jpeg">
+    <img src="11.jpeg">
+    <img src="12.jpeg">
+</div>
+
+<a href="index.html" class="back">Go Back 💖</a>
+
+</body>
+</html>
+
+

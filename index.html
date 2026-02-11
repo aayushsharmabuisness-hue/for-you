@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Pufferfish 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <div class="hearts"></div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+<body>
+
+    <div class="container">
+        <h1>To The Most Bhondu Girl 💕</h1>
+
+        <img src="yourphoto.jpg" class="main-photo">
+
+        <p>
+            This little website is just for you.
+            Every page holds a piece of my heart ❤️
+        </p>
+
+        <div class="buttons">
+            <a href="gallery.html">Our Gallery 📸</a>
+            <a href="sorry.html">I'm Sorry 💌</a>
+            <a href="gift.html">A Gift For You 🎁</a>
+            <a href="complaint.html">Raise a Complaint 😤</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

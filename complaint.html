@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raise a Complaint 😤</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <div class="hearts"></div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+<body>
+
+<h1>Tell Me What's Wrong 😔</h1>
+
+<form action="https://formspree.io/f/YOUR_ID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <textarea name="message" placeholder="Your Complaint..." required></textarea>
+    <button type="submit">Send Complaint 💌</button>
+</form>
+
+</body>
+</html>
+

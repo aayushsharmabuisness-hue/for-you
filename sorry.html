@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I'm Sorry 💌</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <div class="hearts"></div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+<body>
+
+<h1>I'm Sorry My Love 💔</h1>
+
+<div class="letter">
+    <p>
+        Babeeeee
+    </p>
+
+    <video controls width="300">
+        <source src="apology.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="buttons">
+    <a href="thankyou.html" class="accept">I Accept Your Apology ❤️</a>
+    <a href="tryagain.html" class="reject">I Don't Accept 😤</a>
+</div>
+
+</body>
+</html>
+

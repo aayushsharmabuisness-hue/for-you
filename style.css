@@ -1,0 +1,94 @@
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    color: white;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.main-photo {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px pink;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background: #ff4e88;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    background: #ff1e63;
+    transform: scale(1.1);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+.letter {
+    background: white;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.gift {
+    font-size: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gift:hover {
+    transform: scale(1.2);
+}
+
+/* Floating Hearts */
+
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    font-size: 20px;
+    animation: float 8s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
